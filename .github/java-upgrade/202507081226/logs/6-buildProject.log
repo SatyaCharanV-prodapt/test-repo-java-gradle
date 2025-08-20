@@ -1,0 +1,19 @@
+2025-07-08T12:52:36.358Z [INFO] [BaseBuildTool] Firing config modified event for mvnw, sleeping for 5 seconds
+2025-07-08T12:52:36.363Z [INFO] [Environment] Running command (Java 21): mvnw --version
+Apache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)
+Maven home: C:\Users\scha0774\.m2\wrapper\dists\apache-maven-3.9.9\977a63e90f436cd6ade95b4c0e10c20c
+Java version: 21.0.7, vendor: Microsoft, runtime: C:\Users\scha0774\.jdks\ms-21.0.7
+Default locale: en_US, platform encoding: UTF-8
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+2025-07-08T12:52:44.260Z [INFO] [BaseBuildTool] New version of mvnw: 3.9.9 -> 3.9.9
+2025-07-08T12:52:44.261Z [INFO] [MavenBuildTool] Getting Java version of c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main from pom.xml
+2025-07-08T12:52:44.262Z [INFO] [MavenBuildTool] Searching for pom.xml files in c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main
+2025-07-08T12:52:44.262Z [INFO] [MavenBuildTool] Getting modules of c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main
+2025-07-08T12:52:44.262Z [INFO] [Environment] Running command (Java 21): mvnw help:evaluate -Dexpression=project.modules -q -DforceStdout
+<modules/>2025-07-08T12:52:58.912Z [INFO] [MavenBuildTool] Found modules: 
+2025-07-08T12:52:58.912Z [INFO] [MavenBuildTool] Found pom.xml files: c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main\pom.xml
+2025-07-08T12:52:58.913Z [INFO] [MavenBuildTool] Java version found in c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main\pom.xml: 21
+2025-07-08T12:52:58.914Z [INFO] [BaseBuildTool] Notifying Java version/Config change: '21' || '21'
+2025-07-08T12:52:58.916Z [INFO] [MavenBuildTool] Getting build errors of c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main using Maven
+2025-07-08T12:52:58.917Z [INFO] [Environment] Running command (Java 21): mvnw -Dencoding=UTF-8 clean test-compile -q -B -fn
+2025-07-08T12:53:52.364Z [INFO] [MavenBuildTool] parsing compilation errors.

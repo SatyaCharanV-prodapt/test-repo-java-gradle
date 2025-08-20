@@ -1,0 +1,1241 @@
+2025-07-08T12:38:40.523Z [INFO] [Environment] Running command (Java 17): java -version
+java version "17.0.4.1" 2022-08-18 LTS
+Java(TM) SE Runtime Environment (build 17.0.4.1+1-LTS-2)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.4.1+1-LTS-2, mixed mode, sharing)
+2025-07-08T12:38:42.168Z [INFO] [JdkEnvironment] Got real Java version: 17.0.4.1
+2025-07-08T12:38:42.168Z [INFO] [Project spring-petclinic-main]: getting Java version.
+2025-07-08T12:38:42.169Z [INFO] [Project spring-petclinic-main]: got Java version: 17
+2025-07-08T12:38:42.170Z [INFO] Collecting OpenRewrite recipes for upgrading to Java 21.
+2025-07-08T12:38:42.173Z [INFO] Dry run OpenRewrite to collect additional recipes.
+2025-07-08T12:38:42.174Z [INFO] [MavenBuildTool] Running OpenRewrite recipes in c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main using Maven
+2025-07-08T12:38:42.175Z [INFO] [MavenBuildTool] Running OpenRewrite recipes: org.openrewrite.java.migrate.UpgradeToJava21
+2025-07-08T12:38:42.175Z [INFO] [Environment] Running command (Java 17): mvnw -B org.openrewrite.maven:rewrite-maven-plugin:5.37.1:dryRun -Drewrite.activeRecipes=org.openrewrite.java.migrate.UpgradeToJava21 -Drewrite.recipeArtifactCoordinates=org.openrewrite.recipe:rewrite-migrate-java:2.25.0
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------< org.springframework.samples:spring-petclinic >------------
+[INFO] Building petclinic 3.5.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> rewrite:5.37.1:dryRun (default-cli) > process-test-classes @ spring-petclinic >>>
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java) @ spring-petclinic ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- spring-javaformat:0.0.46:validate (default) @ spring-petclinic ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:check (nohttp-checkstyle-validation) @ spring-petclinic ---
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- jacoco:0.8.13:prepare-agent (default) @ spring-petclinic ---
+[INFO] argLine set to -javaagent:C:\\Users\\scha0774\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.13\\org.jacoco.agent-0.8.13-runtime.jar=destfile=c:\\Users\\scha0774\\Downloads\\spring-petclinic-main1\\spring-petclinic-main\\target\\jacoco.exec
+[INFO] 
+[INFO] --- git-commit-id:9.0.1:revision (default) @ spring-petclinic ---
+[INFO] dotGitDirectory 'c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main\.git'
+[INFO] Collected git.build.user.name with value scha0774
+[INFO] Collected git.build.user.email with value Satya.Charan@sysco.com
+[INFO] Collected git.branch with value java-upgrade-202507081226
+[INFO] Collected git.commit.id.describe with value 4ce7ef5
+[INFO] Collected git.commit.id.describe-short with value 4ce7ef5
+[INFO] Collected git.commit.id with value 4ce7ef566c3fa1828aa92e233cbabfff1b60ce4e
+[INFO] Collected git.commit.id.abbrev with value 4ce7ef5
+[INFO] Collected git.dirty with value false
+[INFO] Collected git.commit.user.name with value scha0774
+[INFO] Collected git.commit.user.email with value Satya.Charan@sysco.com
+[INFO] Collected git.commit.message.full with value Initial commit
+[INFO] Collected git.commit.message.short with value Initial commit
+[INFO] Collected git.commit.time with value 2025-07-08T17:49:44+05:30
+[INFO] Collected git.commit.author.time with value 2025-07-08T17:49:44+05:30
+[INFO] Collected git.commit.committer.time with value 2025-07-08T17:49:44+05:30
+[INFO] Collected git.remote.origin.url with value null
+[INFO] Collected git.tags with value 
+[INFO] Collected git.tag with value 
+[INFO] Collected git.closest.tag.name with value 
+[INFO] Collected git.closest.tag.commit.count with value 
+[INFO] Collected git.total.commit.count with value 1
+[INFO] Collected git.local.branch.ahead with value NO_REMOTE
+[INFO] Collected git.local.branch.behind with value NO_REMOTE
+[INFO] Collected git.build.time with value 2024-11-28T20:07:52+05:30
+[INFO] Collected git.build.version with value 3.5.0-SNAPSHOT
+[INFO] Collected git.build.host with value 247-W11-DVM88
+[INFO] including property 'git.tags' in results
+[INFO] including property 'git.build.version' in results
+[INFO] including property 'git.branch' in results
+[INFO] including property 'git.build.host' in results
+[INFO] including property 'git.commit.id' in results
+[INFO] including property 'git.commit.user.email' in results
+[INFO] including property 'git.local.branch.behind' in results
+[INFO] including property 'git.commit.author.time' in results
+[INFO] including property 'git.build.user.name' in results
+[INFO] including property 'git.dirty' in results
+[INFO] including property 'git.closest.tag.commit.count' in results
+[INFO] including property 'git.commit.user.name' in results
+[INFO] including property 'git.commit.id.abbrev' in results
+[INFO] including property 'git.commit.id.describe-short' in results
+[INFO] including property 'git.total.commit.count' in results
+[INFO] including property 'git.commit.id.describe' in results
+[INFO] including property 'git.build.user.email' in results
+[INFO] including property 'git.commit.message.short' in results
+[INFO] including property 'git.commit.committer.time' in results
+[INFO] including property 'git.tag' in results
+[INFO] including property 'git.closest.tag.name' in results
+[INFO] including property 'git.local.branch.ahead' in results
+[INFO] including property 'git.commit.time' in results
+[INFO] including property 'git.build.time' in results
+[INFO] including property 'git.commit.message.full' in results
+[INFO] including property 'git.remote.origin.url' in results
+[INFO] Reading existing properties file [c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main\target\classes\git.properties] (for project petclinic)...
+[INFO] Writing properties file [c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main\target\classes\git.properties] (for project petclinic)...
+[INFO] 
+[INFO] --- spring-boot:3.5.0:build-info (default) @ spring-petclinic ---
+[INFO] 
+[INFO] --- cyclonedx:2.9.1:makeAggregateBom (default) @ spring-petclinic ---
+[INFO] CycloneDX: Resolving Dependencies
+[INFO] CycloneDX: Creating BOM version 1.6 with 89 component(s)
+[INFO] CycloneDX: Writing and validating BOM (JSON): c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main\target\classes\META-INF\sbom\application.cdx.json
+[WARNING] Unknown keyword meta:enum - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword
+[WARNING] Unknown keyword deprecated - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword
+[INFO]            attaching as spring-petclinic-3.5.0-SNAPSHOT-cyclonedx.json
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ spring-petclinic ---
+[INFO] Copying 3 resources from src\main\resources to target\classes
+[INFO] Copying 47 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ spring-petclinic ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ spring-petclinic ---
+[INFO] skip non existing resourceDirectory c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ spring-petclinic ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< rewrite:5.37.1:dryRun (default-cli) < process-test-classes @ spring-petclinic <<<
+[INFO] 
+[INFO] 
+[INFO] --- rewrite:5.37.1:dryRun (default-cli) @ spring-petclinic ---
+[INFO] Using active recipe(s) [org.openrewrite.java.migrate.UpgradeToJava21]
+[INFO] Using active styles(s) []
+[INFO] Validating active recipes...
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in RemoveDependency.configuration: is required
+[ERROR] Recipe validation error in RemoveDependency.scope: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in RemoveDependency.configuration: is required
+[ERROR] Recipe validation error in RemoveDependency.scope: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in SetupJavaUpgradeJavaVersion.minimumJavaMajorVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in RemoveDependency.configuration: is required
+[ERROR] Recipe validation error in RemoveDependency.scope: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in RemoveDependency.configuration: is required
+[ERROR] Recipe validation error in RemoveDependency.scope: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in RemoveDependency.configuration: is required
+[ERROR] Recipe validation error in RemoveDependency.scope: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in RemoveDependency.configuration: is required
+[ERROR] Recipe validation error in RemoveDependency.scope: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in RemoveDependency.configuration: is required
+[ERROR] Recipe validation error in RemoveDependency.scope: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in RemoveDependency.configuration: is required
+[ERROR] Recipe validation error in RemoveDependency.scope: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in RemoveDependency.configuration: is required
+[ERROR] Recipe validation error in RemoveDependency.scope: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in RemoveDependency.configuration: is required
+[ERROR] Recipe validation error in RemoveDependency.scope: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in SetupJavaUpgradeJavaVersion.minimumJavaMajorVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation errors detected as part of one or more activeRecipe(s). Execution will continue regardless.
+[INFO] Project [petclinic] Resolving Poms...
+[WARNING] Failed to access maven repository https://repo.spring.io/snapshot due to: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[WARNING] Failed to access maven repository https://repo.spring.io/milestone due to: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[WARNING] Failed to access maven repository https://oss.sonatype.org/content/repositories/snapshots due to: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[WARNING] Failed to access maven repository https://oss.sonatype.org/content/repositories/snapshots due to: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[WARNING] Failed to access maven repository https://repo.spring.io/snapshot due to: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[WARNING] Failed to access maven repository https://repository.jboss.org/nexus/content/groups/public/ due to: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[WARNING] Failed to access maven repository https://oss.sonatype.org/content/repositories/snapshots due to: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[WARNING] Failed to access maven repository https://repository.ow2.org/nexus/content/repositories/snapshots due to: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[INFO] Project [petclinic] Parsing source files
+[INFO] Running recipe(s)...
+[WARNING] These recipes would make changes to pom.xml:
+[WARNING]     org.openrewrite.java.migrate.UpgradeBuildToJava21
+[WARNING]         org.openrewrite.java.migrate.UpgradeJavaVersion: {version=21}
+[WARNING]             org.openrewrite.java.migrate.maven.UpdateMavenProjectPropertyJavaVersion: {version=21}
+[WARNING] These recipes would make changes to src\test\java\org\springframework\samples\petclinic\service\ClinicServiceTests.java:
+[WARNING]     org.openrewrite.java.migrate.UpgradeBuildToJava21
+[WARNING]         org.openrewrite.java.migrate.UpgradeJavaVersion: {version=21}
+[WARNING]         org.openrewrite.java.migrate.util.SequencedCollection
+[WARNING]             org.openrewrite.java.migrate.util.ListFirstAndLast
+[WARNING] These recipes would make changes to src\test\java\org\springframework\samples\petclinic\system\I18nPropertiesSyncTest.java:
+[WARNING]     org.openrewrite.java.migrate.UpgradeToJava17
+[WARNING]         org.openrewrite.java.migrate.Java8toJava11
+[WARNING]             org.openrewrite.java.migrate.nio.file.PathsGetToPathOf
+[WARNING]                 org.openrewrite.java.ChangeMethodTargetToStatic: {methodPattern=java.nio.file.Paths get(..), fullyQualifiedTargetTypeName=java.nio.file.Path}
+[WARNING]                 org.openrewrite.java.ChangeMethodName: {methodPattern=java.nio.file.Path get(..), newMethodName=of}
+[WARNING]         org.openrewrite.java.migrate.UpgradeBuildToJava21
+[WARNING]             org.openrewrite.java.migrate.UpgradeJavaVersion: {version=21}
+[WARNING] Patch file available:
+[WARNING]     c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main\target\rewrite\rewrite.patch
+[WARNING] Estimate time saved: 10m
+[WARNING] Run 'mvn rewrite:run' to apply the recipes.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  06:01 min
+[INFO] Finished at: 2025-07-08T18:15:03+05:30
+[INFO] ------------------------------------------------------------------------
+2025-07-08T12:45:04.043Z [INFO] [MavenBuildTool] Cleaning up/Notifying after OpenRewrite success.
+2025-07-08T12:45:04.044Z [INFO] [Project spring-petclinic-main]: getting dependencies promise.
+2025-07-08T12:45:04.045Z [INFO] Saving recipe configuration to c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main\javaupgrade.rewrite.yml:
+
+2025-07-08T12:45:04.046Z [INFO] Collected OpenRewrite recipes:
+org.openrewrite.java.migrate.UpgradeToJava21
+2025-07-08T12:45:04.047Z [INFO] Running OpenRewrite recipes:
+org.openrewrite.java.migrate.UpgradeToJava21
+2025-07-08T12:45:04.047Z [INFO] [MavenBuildTool] Running OpenRewrite recipes in c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main using Maven
+2025-07-08T12:45:04.048Z [INFO] [MavenBuildTool] Running OpenRewrite recipes: org.openrewrite.java.migrate.UpgradeToJava21
+2025-07-08T12:45:04.048Z [INFO] [Environment] Running command (Java 17): mvnw -B org.openrewrite.maven:rewrite-maven-plugin:5.37.1:run -Drewrite.activeRecipes=org.openrewrite.java.migrate.UpgradeToJava21 -Drewrite.recipeArtifactCoordinates=org.openrewrite.recipe:rewrite-migrate-java:2.25.0
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------< org.springframework.samples:spring-petclinic >------------
+[INFO] Building petclinic 3.5.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> rewrite:5.37.1:run (default-cli) > process-test-classes @ spring-petclinic >>>
+[INFO] 
+[INFO] --- enforcer:3.5.0:enforce (enforce-java) @ spring-petclinic ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- spring-javaformat:0.0.46:validate (default) @ spring-petclinic ---
+[INFO] 
+[INFO] --- checkstyle:3.6.0:check (nohttp-checkstyle-validation) @ spring-petclinic ---
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- jacoco:0.8.13:prepare-agent (default) @ spring-petclinic ---
+[INFO] argLine set to -javaagent:C:\\Users\\scha0774\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.13\\org.jacoco.agent-0.8.13-runtime.jar=destfile=c:\\Users\\scha0774\\Downloads\\spring-petclinic-main1\\spring-petclinic-main\\target\\jacoco.exec
+[INFO] 
+[INFO] --- git-commit-id:9.0.1:revision (default) @ spring-petclinic ---
+[INFO] dotGitDirectory 'c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main\.git'
+[INFO] Collected git.build.user.name with value scha0774
+[INFO] Collected git.build.user.email with value Satya.Charan@sysco.com
+[INFO] Collected git.branch with value java-upgrade-202507081226
+[INFO] Collected git.commit.id.describe with value 4ce7ef5
+[INFO] Collected git.commit.id.describe-short with value 4ce7ef5
+[INFO] Collected git.commit.id with value 4ce7ef566c3fa1828aa92e233cbabfff1b60ce4e
+[INFO] Collected git.commit.id.abbrev with value 4ce7ef5
+[INFO] Collected git.dirty with value false
+[INFO] Collected git.commit.user.name with value scha0774
+[INFO] Collected git.commit.user.email with value Satya.Charan@sysco.com
+[INFO] Collected git.commit.message.full with value Initial commit
+[INFO] Collected git.commit.message.short with value Initial commit
+[INFO] Collected git.commit.time with value 2025-07-08T17:49:44+05:30
+[INFO] Collected git.commit.author.time with value 2025-07-08T17:49:44+05:30
+[INFO] Collected git.commit.committer.time with value 2025-07-08T17:49:44+05:30
+[INFO] Collected git.remote.origin.url with value null
+[INFO] Collected git.tags with value 
+[INFO] Collected git.tag with value 
+[INFO] Collected git.closest.tag.name with value 
+[INFO] Collected git.closest.tag.commit.count with value 
+[INFO] Collected git.total.commit.count with value 1
+[INFO] Collected git.local.branch.ahead with value NO_REMOTE
+[INFO] Collected git.local.branch.behind with value NO_REMOTE
+[INFO] Collected git.build.time with value 2024-11-28T20:07:52+05:30
+[INFO] Collected git.build.version with value 3.5.0-SNAPSHOT
+[INFO] Collected git.build.host with value 247-W11-DVM88
+[INFO] including property 'git.tags' in results
+[INFO] including property 'git.build.version' in results
+[INFO] including property 'git.branch' in results
+[INFO] including property 'git.build.host' in results
+[INFO] including property 'git.commit.id' in results
+[INFO] including property 'git.commit.user.email' in results
+[INFO] including property 'git.local.branch.behind' in results
+[INFO] including property 'git.commit.author.time' in results
+[INFO] including property 'git.build.user.name' in results
+[INFO] including property 'git.dirty' in results
+[INFO] including property 'git.closest.tag.commit.count' in results
+[INFO] including property 'git.commit.user.name' in results
+[INFO] including property 'git.commit.id.abbrev' in results
+[INFO] including property 'git.commit.id.describe-short' in results
+[INFO] including property 'git.total.commit.count' in results
+[INFO] including property 'git.commit.id.describe' in results
+[INFO] including property 'git.build.user.email' in results
+[INFO] including property 'git.commit.message.short' in results
+[INFO] including property 'git.commit.committer.time' in results
+[INFO] including property 'git.tag' in results
+[INFO] including property 'git.closest.tag.name' in results
+[INFO] including property 'git.local.branch.ahead' in results
+[INFO] including property 'git.commit.time' in results
+[INFO] including property 'git.build.time' in results
+[INFO] including property 'git.commit.message.full' in results
+[INFO] including property 'git.remote.origin.url' in results
+[INFO] Reading existing properties file [c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main\target\classes\git.properties] (for project petclinic)...
+[INFO] Properties file [c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main\target\classes\git.properties] is up-to-date (for module petclinic)...
+[INFO] 
+[INFO] --- spring-boot:3.5.0:build-info (default) @ spring-petclinic ---
+[INFO] 
+[INFO] --- cyclonedx:2.9.1:makeAggregateBom (default) @ spring-petclinic ---
+[INFO] CycloneDX: Resolving Dependencies
+[INFO] CycloneDX: Creating BOM version 1.6 with 89 component(s)
+[INFO] CycloneDX: Writing and validating BOM (JSON): c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main\target\classes\META-INF\sbom\application.cdx.json
+[WARNING] Unknown keyword meta:enum - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword
+[WARNING] Unknown keyword deprecated - you should define your own Meta Schema. If the keyword is irrelevant for validation, just use a NonValidationKeyword or if it should generate annotations AnnotationKeyword
+[INFO]            attaching as spring-petclinic-3.5.0-SNAPSHOT-cyclonedx.json
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ spring-petclinic ---
+[INFO] Copying 3 resources from src\main\resources to target\classes
+[INFO] Copying 47 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ spring-petclinic ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ spring-petclinic ---
+[INFO] skip non existing resourceDirectory c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ spring-petclinic ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< rewrite:5.37.1:run (default-cli) < process-test-classes @ spring-petclinic <<<
+[INFO] 
+[INFO] 
+[INFO] --- rewrite:5.37.1:run (default-cli) @ spring-petclinic ---
+[INFO] Using active recipe(s) [org.openrewrite.java.migrate.UpgradeToJava21]
+[INFO] Using active styles(s) []
+[INFO] Validating active recipes...
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in RemoveDependency.configuration: is required
+[ERROR] Recipe validation error in RemoveDependency.scope: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in RemoveDependency.configuration: is required
+[ERROR] Recipe validation error in RemoveDependency.scope: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in SetupJavaUpgradeJavaVersion.minimumJavaMajorVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in RemoveDependency.configuration: is required
+[ERROR] Recipe validation error in RemoveDependency.scope: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in RemoveDependency.configuration: is required
+[ERROR] Recipe validation error in RemoveDependency.scope: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in RemoveDependency.configuration: is required
+[ERROR] Recipe validation error in RemoveDependency.scope: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in RemoveDependency.configuration: is required
+[ERROR] Recipe validation error in RemoveDependency.scope: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in RemoveDependency.configuration: is required
+[ERROR] Recipe validation error in RemoveDependency.scope: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in RemoveDependency.configuration: is required
+[ERROR] Recipe validation error in RemoveDependency.scope: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in RemoveDependency.configuration: is required
+[ERROR] Recipe validation error in RemoveDependency.scope: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in RemoveDependency.configuration: is required
+[ERROR] Recipe validation error in RemoveDependency.scope: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in ChangeDependency.changeManagedDependency: is required
+[ERROR] Recipe validation error in ChangeDependency.overrideManagedVersion: is required
+[ERROR] Recipe validation error in ChangeDependency.versionPattern: is required
+[ERROR] Recipe validation error in AddDependency.classifier: is required
+[ERROR] Recipe validation error in AddDependency.configuration: is required
+[ERROR] Recipe validation error in AddDependency.extension: is required
+[ERROR] Recipe validation error in AddDependency.familyPattern: is required
+[ERROR] Recipe validation error in AddDependency.optional: is required
+[ERROR] Recipe validation error in AddDependency.releasesOnly: is required
+[ERROR] Recipe validation error in AddDependency.scope: is required
+[ERROR] Recipe validation error in AddDependency.type: is required
+[ERROR] Recipe validation error in AddDependency.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in UpgradeJavaVersion.distribution: is required
+[ERROR] Recipe validation error in SetupJavaUpgradeJavaVersion.minimumJavaMajorVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.overrideManagedVersion: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.retainVersions: is required
+[ERROR] Recipe validation error in UpgradeDependencyVersion.versionPattern: is required
+[ERROR] Recipe validation errors detected as part of one or more activeRecipe(s). Execution will continue regardless.
+[INFO] Project [petclinic] Resolving Poms...
+[WARNING] Failed to access maven repository https://repo.spring.io/snapshot due to: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[WARNING] Failed to access maven repository https://repo.spring.io/milestone due to: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[WARNING] Failed to access maven repository https://oss.sonatype.org/content/repositories/snapshots due to: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[WARNING] Failed to access maven repository https://oss.sonatype.org/content/repositories/snapshots due to: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[WARNING] Failed to access maven repository https://repo.spring.io/snapshot due to: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[WARNING] Failed to access maven repository https://repository.jboss.org/nexus/content/groups/public/ due to: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[WARNING] Failed to access maven repository https://oss.sonatype.org/content/repositories/snapshots due to: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[WARNING] Failed to access maven repository https://repository.ow2.org/nexus/content/repositories/snapshots due to: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+[INFO] Project [petclinic] Parsing source files
+[INFO] Running recipe(s)...
+[WARNING] Changes have been made to pom.xml by:
+[WARNING]     org.openrewrite.java.migrate.UpgradeBuildToJava21
+[WARNING]         org.openrewrite.java.migrate.UpgradeJavaVersion: {version=21}
+[WARNING]             org.openrewrite.java.migrate.maven.UpdateMavenProjectPropertyJavaVersion: {version=21}
+[WARNING] Changes have been made to src\test\java\org\springframework\samples\petclinic\service\ClinicServiceTests.java by:
+[WARNING]     org.openrewrite.java.migrate.UpgradeBuildToJava21
+[WARNING]         org.openrewrite.java.migrate.UpgradeJavaVersion: {version=21}
+[WARNING]         org.openrewrite.java.migrate.util.SequencedCollection
+[WARNING]             org.openrewrite.java.migrate.util.ListFirstAndLast
+[WARNING] Changes have been made to src\test\java\org\springframework\samples\petclinic\system\I18nPropertiesSyncTest.java by:
+[WARNING]     org.openrewrite.java.migrate.UpgradeToJava17
+[WARNING]         org.openrewrite.java.migrate.Java8toJava11
+[WARNING]             org.openrewrite.java.migrate.nio.file.PathsGetToPathOf
+[WARNING]                 org.openrewrite.java.ChangeMethodTargetToStatic: {methodPattern=java.nio.file.Paths get(..), fullyQualifiedTargetTypeName=java.nio.file.Path}
+[WARNING]                 org.openrewrite.java.ChangeMethodName: {methodPattern=java.nio.file.Path get(..), newMethodName=of}
+[WARNING]         org.openrewrite.java.migrate.UpgradeBuildToJava21
+[WARNING]             org.openrewrite.java.migrate.UpgradeJavaVersion: {version=21}
+[WARNING] Please review and commit the results.
+[WARNING] Estimate time saved: 10m
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  05:34 min
+[INFO] Finished at: 2025-07-08T18:20:58+05:30
+[INFO] ------------------------------------------------------------------------
+2025-07-08T12:51:03.582Z [INFO] [MavenBuildTool] Cleaning up/Notifying after OpenRewrite success.
+2025-07-08T12:51:03.583Z [INFO] [MavenBuildTool] Notifying Maven config changed.
+2025-07-08T12:51:03.584Z [INFO] [BaseBuildTool] Firing config modified event for mvnw, sleeping for 5 seconds
+2025-07-08T12:51:03.585Z [INFO] [Environment] Running command (Java 17): mvnw --version
+Apache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)
+Maven home: C:\Users\scha0774\.m2\wrapper\dists\apache-maven-3.9.9\977a63e90f436cd6ade95b4c0e10c20c
+Java version: 17.0.4.1, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-17.0.4.1
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+2025-07-08T12:51:24.640Z [INFO] [BaseBuildTool] New version of mvnw: 3.9.9 -> 3.9.9
+2025-07-08T12:51:24.641Z [INFO] [MavenBuildTool] Getting Java version of c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main from pom.xml
+2025-07-08T12:51:24.641Z [INFO] [MavenBuildTool] Searching for pom.xml files in c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main
+2025-07-08T12:51:24.642Z [INFO] [MavenBuildTool] Getting modules of c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main
+2025-07-08T12:51:24.642Z [INFO] [Environment] Running command (Java 17): mvnw help:evaluate -Dexpression=project.modules -q -DforceStdout
+<modules/>2025-07-08T12:52:23.972Z [INFO] [MavenBuildTool] Found modules: 
+2025-07-08T12:52:23.972Z [INFO] [MavenBuildTool] Found pom.xml files: c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main\pom.xml
+2025-07-08T12:52:23.974Z [INFO] [MavenBuildTool] Java version found in c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main\pom.xml: 21
+2025-07-08T12:52:23.974Z [INFO] [BaseBuildTool] Notifying Java version/Config change: '21' || '21'
+2025-07-08T12:52:23.978Z [INFO] OpenRewrite completed successfully.
+2025-07-08T12:52:23.978Z [INFO] [Environment] Running command (Java 21): java -version
+openjdk version "21.0.7" 2025-04-15 LTS
+OpenJDK Runtime Environment Microsoft-11369940 (build 21.0.7+6-LTS)
+OpenJDK 64-Bit Server VM Microsoft-11369940 (build 21.0.7+6-LTS, mixed mode, sharing)
+2025-07-08T12:52:24.300Z [INFO] [JdkEnvironment] Got real Java version: 21.0.7
+2025-07-08T12:52:24.301Z [INFO] [Project spring-petclinic-main]: getting Java version.
+2025-07-08T12:52:24.301Z [INFO] [Project spring-petclinic-main]: got Java version: 21
+2025-07-08T12:52:24.302Z [INFO] Java version after applying recipes: 21(JDK version)/21(Project Java version)
+2025-07-08T12:52:24.302Z [INFO] OpenRewrite upgrade Java version successfully.
+2025-07-08T12:52:29.201Z [INFO] [java-upgrade-202507081226 0aa6759] Use OpenRewrite to update the project to Java 21
+ 3 files changed, 8 insertions(+), 7 deletions(-)
+
+2025-07-08T12:52:30.455Z [INFO] 0aa6759fe5c391425b2e4b06f63d7cb37eb42671
+
+2025-07-08T12:52:32.129Z [INFO] 1	1	pom.xml
+3	3	src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java
+4	3	src/test/java/org/springframework/samples/petclinic/system/I18nPropertiesSyncTest.java
+
+2025-07-08T12:52:32.186Z [WARN] No changes about Use OpenRewrite to update the project to Java 21 for c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main to commit.

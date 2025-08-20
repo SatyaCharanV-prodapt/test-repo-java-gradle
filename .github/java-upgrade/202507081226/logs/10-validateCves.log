@@ -1,0 +1,16 @@
+2025-07-09T11:27:26.355Z [INFO] Getting CVEs for dependencies: org.springframework.boot:spring-boot-starter-parent:3.5.0,com.h2database:h2:2.3.232,com.mysql:mysql-connector-j:8.4.0,org.postgresql:postgresql:42.7.4,org.webjars:webjars-locator-lite:1.1.0,org.webjars.npm:bootstrap:5.3.6,org.webjars.npm:font-awesome:4.7.0,com.github.ben-manes.caffeine:caffeine:3.1.8
+2025-07-09T11:27:26.358Z [INFO] getting CVEs for dependencies:
+ - org.springframework.boot:spring-boot-starter-parent:3.5.0
+  - com.h2database:h2:2.3.232
+  - com.mysql:mysql-connector-j:8.4.0
+  - org.postgresql:postgresql:42.7.4
+  - org.webjars:webjars-locator-lite:1.1.0
+  - org.webjars.npm:bootstrap:5.3.6
+  - org.webjars.npm:font-awesome:4.7.0
+  - com.github.ben-manes.caffeine:caffeine:3.1.8...
+2025-07-09T11:27:26.365Z [INFO] getting gitHub access token...
+2025-07-09T11:27:26.408Z [INFO] listing CVEs for dependencies from GithHub...
+2025-07-09T11:27:26.759Z [INFO] found 1 CVEs for dependencies
+2025-07-09T11:27:26.760Z [INFO] grouping CVEs and finding min patched version by dep...
+2025-07-09T11:27:26.763Z [INFO] done getting CVEs for dependencies
+2025-07-09T11:27:26.764Z [INFO] Found 1 dependencies with known CVEs

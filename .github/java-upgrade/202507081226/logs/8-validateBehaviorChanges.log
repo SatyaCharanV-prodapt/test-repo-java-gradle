@@ -1,0 +1,151 @@
+2025-07-08T12:54:18.690Z [INFO] Getting code changes using `git diff`...
+2025-07-08T12:54:19.993Z [INFO] diff --git a/pom.xml b/pom.xml
+index 8576c22..0e9c4bf 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -18,7 +18,7 @@
+   <properties>
+ 
+     <!-- Generic properties -->
+-    <java.version>17</java.version>
++    <java.version>21</java.version>
+     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+     <!-- Important for reproducible builds. Update using e.g. ./mvnw versions:set -DnewVersion=... -->
+diff --git a/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java b/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java
+index 4c78ab3..84370bc 100644
+--- a/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java
++++ b/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java
+@@ -100,8 +100,8 @@ class ClinicServiceTests {
+ 		Owner owner = optionalOwner.get();
+ 		assertThat(owner.getLastName()).startsWith("Franklin");
+ 		assertThat(owner.getPets()).hasSize(1);
+-		assertThat(owner.getPets().get(0).getType()).isNotNull();
+-		assertThat(owner.getPets().get(0).getType().getName()).isEqualTo("cat");
++		assertThat(owner.getPets().getFirst().getType()).isNotNull();
++		assertThat(owner.getPets().getFirst().getType().getName()).isEqualTo("cat");
+ 	}
+ 
+ 	@Test
+@@ -208,7 +208,7 @@ class ClinicServiceTests {
+ 		Vet vet = EntityUtils.getById(vets, Vet.class, 3);
+ 		assertThat(vet.getLastName()).isEqualTo("Douglas");
+ 		assertThat(vet.getNrOfSpecialties()).isEqualTo(2);
+-		assertThat(vet.getSpecialties().get(0).getName()).isEqualTo("dentistry");
++		assertThat(vet.getSpecialties().getFirst().getName()).isEqualTo("dentistry");
+ 		assertThat(vet.getSpecialties().get(1).getName()).isEqualTo("surgery");
+ 	}
+ 
+diff --git a/src/test/java/org/springframework/samples/petclinic/system/I18nPropertiesSyncTest.java b/src/test/java/org/springframework/samples/petclinic/system/I18nPropertiesSyncTest.java
+index fec159c..e05c7f0 100644
+--- a/src/test/java/org/springframework/samples/petclinic/system/I18nPropertiesSyncTest.java
++++ b/src/test/java/org/springframework/samples/petclinic/system/I18nPropertiesSyncTest.java
+@@ -3,7 +3,8 @@ package org.springframework.samples.petclinic.system;
+ import org.junit.jupiter.api.Test;
+ 
+ import java.io.IOException;
+-import java.nio.file.*;
++import java.nio.file.Files;
++import java.nio.file.Path;
+ import java.util.HashMap;
+ import java.util.List;
+ import java.util.Map;
+@@ -38,7 +39,7 @@ public class I18nPropertiesSyncTest {
+ 
+ 	@Test
+ 	public void checkNonInternationalizedStrings() throws IOException {
+-		Path root = Paths.get("src/main");
++		Path root = Path.of("src/main");
+ 		List<Path> files;
+ 
+ 		try (Stream<Path> stream = Files.walk(root)) {
+@@ -85,7 +86,7 @@ public class I18nPropertiesSyncTest {
+ 	@Test
+ 	public void checkI18nPropertyFilesAreInSync() throws IOException {
+ 		List<Path> propertyFiles;
+-		try (Stream<Path> stream = Files.walk(Paths.get(I18N_DIR))) {
++		try (Stream<Path> stream = Files.walk(Path.of(I18N_DIR))) {
+ 			propertyFiles = stream.filter(p -> p.getFileName().toString().startsWith(BASE_NAME))
+ 				.filter(p -> p.getFileName().toString().endsWith(PROPERTIES))
+ 				.toList();
+
+2025-07-08T12:54:20.124Z [INFO] diff content: 
+ diff --git a/pom.xml b/pom.xml
+index 8576c22..0e9c4bf 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -18,7 +18,7 @@
+   <properties>
+ 
+     <!-- Generic properties -->
+-    <java.version>17</java.version>
++    <java.version>21</java.version>
+     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+     <!-- Important for reproducible builds. Update using e.g. ./mvnw versions:set -DnewVersion=... -->
+diff --git a/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java b/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java
+index 4c78ab3..84370bc 100644
+--- a/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java
++++ b/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java
+@@ -100,8 +100,8 @@ class ClinicServiceTests {
+ 		Owner owner = optionalOwner.get();
+ 		assertThat(owner.getLastName()).startsWith("Franklin");
+ 		assertThat(owner.getPets()).hasSize(1);
+-		assertThat(owner.getPets().get(0).getType()).isNotNull();
+-		assertThat(owner.getPets().get(0).getType().getName()).isEqualTo("cat");
++		assertThat(owner.getPets().getFirst().getType()).isNotNull();
++		assertThat(owner.getPets().getFirst().getType().getName()).isEqualTo("cat");
+ 	}
+ 
+ 	@Test
+@@ -208,7 +208,7 @@ class ClinicServiceTests {
+ 		Vet vet = EntityUtils.getById(vets, Vet.class, 3);
+ 		assertThat(vet.getLastName()).isEqualTo("Douglas");
+ 		assertThat(vet.getNrOfSpecialties()).isEqualTo(2);
+-		assertThat(vet.getSpecialties().get(0).getName()).isEqualTo("dentistry");
++		assertThat(vet.getSpecialties().getFirst().getName()).isEqualTo("dentistry");
+ 		assertThat(vet.getSpecialties().get(1).getName()).isEqualTo("surgery");
+ 	}
+ 
+diff --git a/src/test/java/org/springframework/samples/petclinic/system/I18nPropertiesSyncTest.java b/src/test/java/org/springframework/samples/petclinic/system/I18nPropertiesSyncTest.java
+index fec159c..e05c7f0 100644
+--- a/src/test/java/org/springframework/samples/petclinic/system/I18nPropertiesSyncTest.java
++++ b/src/test/java/org/springframework/samples/petclinic/system/I18nPropertiesSyncTest.java
+@@ -3,7 +3,8 @@ package org.springframework.samples.petclinic.system;
+ import org.junit.jupiter.api.Test;
+ 
+ import java.io.IOException;
+-import java.nio.file.*;
++import java.nio.file.Files;
++import java.nio.file.Path;
+ import java.util.HashMap;
+ import java.util.List;
+ import java.util.Map;
+@@ -38,7 +39,7 @@ public class I18nPropertiesSyncTest {
+ 
+ 	@Test
+ 	public void checkNonInternationalizedStrings() throws IOException {
+-		Path root = Paths.get("src/main");
++		Path root = Path.of("src/main");
+ 		List<Path> files;
+ 
+ 		try (Stream<Path> stream = Files.walk(root)) {
+@@ -85,7 +86,7 @@ public class I18nPropertiesSyncTest {
+ 	@Test
+ 	public void checkI18nPropertyFilesAreInSync() throws IOException {
+ 		List<Path> propertyFiles;
+-		try (Stream<Path> stream = Files.walk(Paths.get(I18N_DIR))) {
++		try (Stream<Path> stream = Files.walk(Path.of(I18N_DIR))) {
+ 			propertyFiles = stream.filter(p -> p.getFileName().toString().startsWith(BASE_NAME))
+ 				.filter(p -> p.getFileName().toString().endsWith(PROPERTIES))
+ 				.toList();
+2025-07-08T12:54:20.128Z [INFO] Validating code behavior changes...
+2025-07-08T12:54:20.133Z [INFO] [unknown]: there are 69 lines.
+2025-07-08T12:54:21.003Z [INFO] [unknown]: there are 902 tokens.
+2025-07-08T12:54:21.004Z [INFO] [unknown]: no need to split the diff file.
+2025-07-08T12:54:21.006Z [INFO] summarizing behavior changes...
+2025-07-08T12:54:21.007Z [INFO] summarizing behavior changes of part 1...
+2025-07-08T12:54:34.969Z [INFO] summarized behavior changes of part 1.
+2025-07-08T12:54:34.970Z [INFO] summarized behavior changes of all parts.
+2025-07-08T12:54:34.970Z [INFO] {}
+2025-07-08T12:54:34.971Z [INFO] Done validating code behavior changes...

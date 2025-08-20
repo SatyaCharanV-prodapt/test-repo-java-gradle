@@ -1,0 +1,3 @@
+2025-07-08T12:30:33.863Z [INFO] [MavenBuildTool] Getting build errors of c:\Users\scha0774\Downloads\spring-petclinic-main1\spring-petclinic-main using Maven
+2025-07-08T12:30:33.866Z [INFO] [Environment] Running command (Java 17): mvnw -Dencoding=UTF-8 clean test-compile -q -B -fn
+2025-07-08T12:32:54.633Z [INFO] [MavenBuildTool] parsing compilation errors.

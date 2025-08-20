@@ -1,0 +1,4 @@
+2025-07-08T12:27:52.394Z [INFO] started generating upgrade plan.
+2025-07-08T12:27:52.398Z [INFO] [Project spring-petclinic-main]: getting Java version.
+2025-07-08T12:27:52.399Z [INFO] [Project spring-petclinic-main]: got Java version: 17
+2025-07-08T12:27:52.413Z [INFO] completed generating upgrade plan.
